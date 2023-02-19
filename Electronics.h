@@ -6,7 +6,7 @@
 class Electronics {
 
 public:
-	char _name; // название гаджета
+	const char* _name; // название гаджета
 	int _memory; // объем памяти у гаджета
 	int _weight; // вес гаджета
 	int _battery; // объем аккумулятора
@@ -15,11 +15,11 @@ public:
 
 
 public:
-	Electronics(char name, int memory, int weight, int battery, char connector, char display) /* : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display)*/;
+	Electronics(const char* name, int memory, int weight, int battery, char connector, char display) /* : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display)*/;
+	//Electronics(char name);
 
-
-	char getName();
-	char setName(char name);
+	const char getName();
+	const char setName(const char* name);
 
 	int getMemory();
 	int setMemory(int memory);

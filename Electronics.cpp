@@ -5,16 +5,18 @@
 # include <stdlib.h>
 # include <iostream>
 
+# pragma warning (default: 4716);
 
 using namespace std;
 
 
-	Electronics::Electronics(char name, int memory, int weight, int battery, char connector, char display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
+	Electronics::Electronics(const char* name, int memory, int weight, int battery, char connector, char display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
+	//Electronics::Electronics(char name) {};
 
-	char Electronics::getName() {
-		return _name;
+	const char Electronics::getName() {
+		return *_name;
 	}
-	char Electronics::setName(char name) {
+	const char Electronics::setName(const char* name) {
 		_name = name;
 	}
 	int Electronics::getMemory() {
@@ -52,7 +54,7 @@ using namespace std;
 		_display = display;
 	}
 	void Electronics::Show(char name) {
-		std::cout << name;
+		std::cout <<  name;
 	}
 
 	
