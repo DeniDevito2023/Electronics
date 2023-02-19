@@ -3,15 +3,13 @@
 # include <string.h>
 # include <cstdio>
 # include <stdlib.h>
+# include <iostream>
 
 
 using namespace std;
 
 
-//class Electronics {
-//public:
-
-//Electronics(char name, int memory, int weight, int battery, char connector, char display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
+	Electronics::Electronics(char name, int memory, int weight, int battery, char connector, char display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
 
 	char Electronics::getName() {
 		return _name;
@@ -39,11 +37,22 @@ using namespace std;
 	int Electronics::setBattery(int battery) {
 		_battery = battery;
 	}
-	void Electronics::Show(char name) {
-		cout << name;
+
+	char Electronics::getConnector() {
+		return _connector;
+	}
+	char Electronics::setConnector(char connector) {
+		_connector = connector;
 	}
 
+	char Electronics::getDisplay() {
+		return _display;
+	}
+	char Electronics::setDisplay(char display) {
+		_display = display;
+	}
+	void Electronics::Show(char name) {
+		std::cout << name;
+	}
 
-	//WashingMachine::WashingMachine(char name, int weight, char connector, char display) {
-	//};
-
+	

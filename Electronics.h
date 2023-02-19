@@ -2,10 +2,8 @@
 # include <iostream>
 
 
-//class IElectronics {
-//	virtual void message() = 0;
-//};
-class Electronics /*: public IElectronics*/ {
+
+class Electronics {
 
 public:
 	char _name; // название гаджета
@@ -17,7 +15,7 @@ public:
 
 
 public:
-	Electronics(char name, int memory, int weight, int battery, char connector, char display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
+	Electronics(char name, int memory, int weight, int battery, char connector, char display) /* : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display)*/;
 
 
 	char getName();
@@ -32,15 +30,13 @@ public:
 	int getBattery();
 	int setBattery(int battery);
 
+	char getConnector();
+	char setConnector(char name);
+
+	char getDisplay();
+	char setDisplay(char name);
+
 	void Show(char name);
 
 };
 
-//class WashingMachine : public Electronics {
-//
-//
-//public:
-//	WashingMachine(char name, int weight, char connector, char display) {};
-//
-//
-//};

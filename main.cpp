@@ -1,11 +1,14 @@
 # include <iostream>
-# include <cstring>
+# include <string.h>
 # include "Electronics.h"
+# include <string>
+
+
 
 int main() {
+	
+	
+	Electronics f;
 
-	//Electronics Elec("Bosh", 12, 4, 1200, "USB", "Retina");
-
-	//Elec.Show();
-
+	f.Show("Bosh");
 }
