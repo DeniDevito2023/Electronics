@@ -1,42 +1,47 @@
 # pragma once
 # include <iostream>
+# include <string.h>
+# include <cstring>
+# include <cstdio>
+# include <stdlib.h>
 
 
+using namespace std;
 
 class Electronics {
 
-public:
-	const char* _name; // название гаджета
-	int _memory; // объем памяти у гаджета
+private:
+	string _name; // название гаджета
+	int _memory; // объем памяти у гаджета !
 	int _weight; // вес гаджета
-	int _battery; // объем аккумулятора
-	char _connector; // разъем
-	char _display; // дисплей
+	int _battery; // объем аккумулятора !
+	string _connector; // разъем
+	string _display; // дисплей !
 
 
 public:
-	Electronics(const char* name, int memory, int weight, int battery, char connector, char display) /* : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display)*/;
-	//Electronics(char name);
+	Electronics(string name, int memory, int weight, int battery, string connector, string display) /* : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display)*/;
+	//Electronics();
 
-	const char getName();
-	const char setName(const char* name);
+	string getName();
+	void setName(string name);
 
 	int getMemory();
-	int setMemory(int memory);
+	void setMemory(int memory);
 
 	int getWeight();
-	int setWeight(int weight);
+	void setWeight(int weight);
 
 	int getBattery();
-	int setBattery(int battery);
+	void setBattery(int battery);
 
-	char getConnector();
-	char setConnector(char name);
+	string getConnector();
+	void setConnector(string name);
 
-	char getDisplay();
-	char setDisplay(char name);
+	string getDisplay();
+	void setDisplay(string name);
 
-	void Show(char name);
+	void Show();
 
 };
 

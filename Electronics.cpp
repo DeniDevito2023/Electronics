@@ -5,56 +5,55 @@
 # include <stdlib.h>
 # include <iostream>
 
-# pragma warning (default: 4716);
+//# pragma warning (default: 4716);
 
 using namespace std;
 
 
-	Electronics::Electronics(const char* name, int memory, int weight, int battery, char connector, char display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
-	//Electronics::Electronics(char name) {};
-
-	const char Electronics::getName() {
-		return *_name;
+	Electronics::Electronics(string name, int memory, int weight, int battery, string connector, string display) : _name(name), _memory(memory), _weight(weight), _battery(battery), _connector(connector), _display(display) {};
+	
+	string Electronics::getName() {
+		return _name;
 	}
-	const char Electronics::setName(const char* name) {
+	void Electronics::setName(string name) {
 		_name = name;
 	}
 	int Electronics::getMemory() {
 		return _memory;
 	}
-	int Electronics::setMemory(int memory) {
+	void Electronics::setMemory(int memory) {
 		_memory = memory;
 	}
 
 	int Electronics::getWeight() {
 		return _weight;
 	}
-	int Electronics::setWeight(int weight) {
+	void Electronics::setWeight(int weight) {
 		_weight = weight;
 	}
 
 	int Electronics::getBattery() {
 		return _battery;
 	}
-	int Electronics::setBattery(int battery) {
+	void Electronics::setBattery(int battery) {
 		_battery = battery;
 	}
 
-	char Electronics::getConnector() {
+	string Electronics::getConnector() {
 		return _connector;
 	}
-	char Electronics::setConnector(char connector) {
+	void Electronics::setConnector(string connector) {
 		_connector = connector;
 	}
 
-	char Electronics::getDisplay() {
+	string Electronics::getDisplay() {
 		return _display;
 	}
-	char Electronics::setDisplay(char display) {
+	void Electronics::setDisplay(string display) {
 		_display = display;
 	}
-	void Electronics::Show(char name) {
-		std::cout <<  name;
+	void Electronics::Show() {
+		std::cout <<  _name;
 	}
 
 	
