@@ -29,6 +29,7 @@ int main() {
 	cout << endl;
 	Elec->Show();
 	cout << endl;
-	Laptop *Lap = 
+	
 	system("pause");
+
 }
